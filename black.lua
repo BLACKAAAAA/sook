@@ -248,7 +248,7 @@ data = {
 {text = '⌔ اذاعه',type = 'text'},{text = '⌔ اذاعه بالتوجيه',type = 'text'},
 },
 {
-{text = '⌔ تحديث المصنوعات',type = 'text'},{text = '⌔ تشغيل البوتات',type = 'text'},
+{text = '⌔ تحديث المصنوعات',type = 'text'},{text = '⌔ ششغيل البوتات',type = 'text'},
 },
 {
 {text = 'اعاده التشغيل ⌔',type = 'text'},
