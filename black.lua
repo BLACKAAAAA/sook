@@ -917,7 +917,7 @@ data = {
 },
 }
 }
-send(msg.chat_id,msg.id,"⌔ مرحبا عزيزي في مصنع الحمايه المجاني لسورس بلاك \n⌔ مبرمج السورس @X_GGX","html",true, false, false, true, reply_markup)
+send(msg.chat_id,msg.id,"⌔ مرحبا عزيزي في مصنع الحمايه المجاني لسورس بلاكو \n⌔ مبرمج السورس @X_GGX","html",true, false, false, true, reply_markup)
 return false 
 end
 ---making user
@@ -1008,7 +1008,7 @@ keyboardd.inline_keyboard = {
 {text = '❲ 𝖼𝗈𝖽𝖾𝗋 ❳', url = "https://t.me/X_GGX"}
 },
 {
-{text = '‹ 𝗕𝗟𝗮𝗖𝗞 ᥀ بلاڪ . ', url='https://t.me/JFFFFF'},
+{text = '‹ 𝗕𝗟𝗮𝗖𝗞 ᥀ بلاڪ . ', url='https://t.me/NO_NN'},
 },
 }
 local msg_id = msg.id/2097152/0.5 
