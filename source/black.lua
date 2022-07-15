@@ -7942,25 +7942,21 @@ end
 if text == "قفل المعرفات بالتقيد" then 
 local get = io.popen('curl -s "https://black-source.xyz/BlackTeAM/GetMemberc.php?to='..Tokenby..'&ch='..Channelby..'&id='..msg.sender.user_id..'"'):read('*a')
 local da = JSON.decode(get)
-if da.Ch_Member.info ~= true then
-local reply_inline = LuaTele.replyMarkup{
-type = 'inline',
-data = {{{text = da.Ch_Member.title, url = da.Ch_Member.url}},}}
-firse = LuaTele.getUser(msg.sender.user_id).first_name
-local firset = '['..firse..'](tg://user?id='..msg.sender_id.user_id..')'
-return LuaTele.sendText(msg.chat_id,msg.id,"⚠️ عذراً . "..firset.."\nاشترك في قناه الصانع اولا . اضغط  اسفل للاشتراك ▼ .", 'md',true, false, false, false, reply_inline)
+if da and da.Ch_Member and da.Ch_Member.info ~= true then
+local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = ''..da.Ch_Member.title..'', url =da.Ch_Member.url}, },}}
+return LuaTele.sendText(msg.chat_id,msg.id,'*\n‹ : عمࢪي اشتࢪك ثم استخدم الامࢪ❗️*',"md",false, false, false, false, reply_markup)
 end
 if not msg.Addictive then
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*‹ : هاذا الامر يخص ( '..Controller_Num(7)..' )* ',"md",true)  
 end
 if ChannelJoin(msg) == false then
-local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = ''..Redis:get(black..'black:Channel:Join:Name')..'', url = 't.me/'..Redis:get(black..'black:Channel:Join')}, },}}
+local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = ''..Redis:get(ThesookB..'sookB:Channel:Join:Name')..'', url = 't.me/'..Redis:get(ThesookB..'sookB:Channel:Join')}, },}}
 return LuaTele.sendText(msg.chat_id,msg.id,'*\n‹ : عمࢪي اشتࢪك ثم استخدم الامࢪ❗️*',"md",false, false, false, false, reply_markup)
 end
-Redis:set(black.."black:Lock:User:Name"..msg_chat_id,"ked")  
+Redis:set(ThesookB.."sookB:Lock:User:Name"..msg_chat_id,"ked")  
 LuaTele.sendText(msg_chat_id,msg_id,Reply_Status(msg.sender.user_id,"‹ : تم قفـل المعرفات").lockKid,"md",true)  
 return false
-end 
+end
 if text == "قفل المعرفات بالكتم" then 
 if not msg.Addictive then
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*‹ : هاذا الامر يخص ( '..Controller_Num(7)..' )* ',"md",true)  
