@@ -91,7 +91,7 @@ UserSudo = Information.UserSudo
 Token = Information.Token
 UserBot = Information.UserBot
 black = Token:match("(%d+)")
-Tokenby == '1969114891:AAFmL8Mwb6zZT-7eZ9y31hnYo19F7zh58Cg'
+Tokenby = '1969114891:AAFmL8Mwb6zZT-7eZ9y31hnYo19F7zh58Cg'
 Channelby = "@bc_cb"
 os.execute('sudo rm -fr .CallBack-Bot/'..black)
 LuaTele = luatele.set_config{api_id=2692371,api_hash='fe85fff033dfe0f328aeb02b4f784930',session_name=black,token=Token}
