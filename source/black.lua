@@ -5433,6 +5433,10 @@ Redis:set(black.."black:Status:SetId"..msg_chat_id,true)
 return LuaTele.sendText(msg_chat_id,msg_id,"‹ : تم تفعيل الرفع ","md",true)
 end
 if TextMsg == 'الالعاب' then
+    if ChannelS(msg).status == false then
+local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text =ChannelS(msg).title, url =ChannelS(msg).url}, },}}
+return LuaTele.sendText(msg.chat_id,msg.id,'*\n‹ : عمࢪي اشتࢪك ثم استخدم الامࢪ❗️*',"md",false, false, false, false, reply_markup)
+end
 Redis:set(black.."black:Status:Games"..msg_chat_id,true) 
 return LuaTele.sendText(msg_chat_id,msg_id,"‹ : تم تفعيل الالعاب ","md",true)
 end
