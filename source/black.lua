@@ -11071,6 +11071,10 @@ data = {
 }
 return LuaTele.sendText(msg_chat_id,msg_id,'‹ : عليك استخدام اوامر التحكم بالقوائم',"md",false, false, false, false, reply_markup)
 elseif text == 'الالعاب' then
+  if ChannelS(msg).status == false then
+local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text =ChannelS(msg).title, url =ChannelS(msg).url}, },}}
+return LuaTele.sendText(msg.chat_id,msg.id,'*\n‹ : عمࢪي اشتࢪك ثم استخدم الامࢪ❗️*',"md",false, false, false, false, reply_markup)
+end
 if not msg.Addictive then
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*‹ : هاذا الامر يخص ( '..Controller_Num(7)..' )* ',"md",true)  
 end
