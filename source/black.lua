@@ -901,7 +901,6 @@ status = false,
 url = ChannelJoin.Ch_Member.url,
 title = ChannelJoin.Ch_Member.title,
 }
-end
 function editrtp(chat,user,msgid,useri)
 if Redis:sismember(black.."black:TheBasics:Group"..chat,useri)  then
 TheBasicsz = "✓"
