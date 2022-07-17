@@ -7699,6 +7699,10 @@ Redis:set(black.."addchannel"..msg.sender.user_id,"on")
 LuaTele.sendText(msg_chat_id,msg_id,"𖥔  ارسل ايدي القناه","md",true)  
 end
 if text == "قفل القناه" then 
+if ChannelS(msg).status == false then
+local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text =ChannelS(msg).title, url =ChannelS(msg).url}, },}}
+return LuaTele.sendText(msg.chat_id,msg.id,'*\n‹ : عمࢪي اشتࢪك ثم استخدم الامࢪ❗️*',"md",false, false, false, false, reply_markup)
+end
 if not msg.Addictive then
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*𖥔 هاذا الامر يخص『 '..Controller_Num(7)..' 』* ',"md",true)  
 end
